@@ -16,10 +16,12 @@ Skywater 130nm Standard Cell Libraries
 
 Workshop Daywise content :- 
 
-[DAY 1 ](https://github.com/lakshminarayanan2k21/VSD_RTL_design_synthesis_workshop/edit/main/README.md) Introduction to Verilog RTL design and Synthesis
+# Day Wise Contents 
 
-#Day 1
-
+|Day        |  Topics Covered                                                                                                                                          |
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+|[Day 1](https://github.com/lakshminarayanan2k21/VSD_RTL_design_synthesis_workshop/edit/main/README.md)| Introduction to Verilog RTL design and Synthesis|
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
