@@ -16,17 +16,7 @@ Skywater 130nm Standard Cell Libraries
 
 Workshop Daywise content :- 
 
-[DAY 1 ](https://github.com/lakshminarayanan2k21/VSD_RTL_design_synthesis_workshop/edit/main/README.md#Day 1).  Introduction to Verilog RTL design and Synthesis
-
-[DAY 2 ] Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
-
-[Day 3 ] Combinational and sequential optmizations
-
-[Day 4 ] GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
-
-[Day 5 ] Optimization in synthesis
-
-
+[DAY 1 ](https://github.com/lakshminarayanan2k21/VSD_RTL_design_synthesis_workshop/edit/main/README.md) Introduction to Verilog RTL design and Synthesis
 
 #Day 1
 
