@@ -16,11 +16,16 @@ Skywater 130nm Standard Cell Libraries
 
 Workshop Daywise content :- 
 
-DAY 1  Introduction to Verilog RTL design and Synthesis
-DAY 2  Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
-Day 3  Combinational and sequential optmizations
-Day 4  GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
-Day 5  Optimization in synthesis
+[DAY 1 ] Introduction to Verilog RTL design and Synthesis
+
+[DAY 2 ] Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
+
+[Day 3 ] Combinational and sequential optmizations
+
+[Day 4 ] GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+
+[Day 5 ] Optimization in synthesis
+
 
 
 
