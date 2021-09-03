@@ -157,10 +157,14 @@ Whenever the input is applied to a constant value whether it propagates constant
 Examples were provided for D input tied to ground and considering set or reset pin as input with output being provided to Nand gate with one of the input as A.
 ![image](https://user-images.githubusercontent.com/89997921/132060453-ebf2d975-9c8b-4b6c-a35b-e536d983459c.png)
 Advanced [ Not COvered as part of Lab]
-State Optimisation
-Retiming
-Sequential Logic Cloning ( Floor Plan Aware Synthesis ) 
 ##Introduction to optimisations part3
+State Optimisation
+Retiming --> usefulness of slack to get the benefit of performance 
+Sequential Logic Cloning ( Floor Plan Aware Synthesis ) 
+Having two copies of A to resolve the timing issues 
+
+
+
 Combinational Logic Optimization
 Sequential Logic Optimization
 Sequential Logic Optimization for Unused Outputs
