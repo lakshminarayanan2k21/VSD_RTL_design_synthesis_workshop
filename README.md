@@ -13,10 +13,8 @@ Workshop Daywise content :-
 
 # Day Wise Contents 
 
-|Day        |  Topics Covered                                                                                                                                          |
---------------------------------------------------------------------------------------------------------------------------------------------------------
-|[Day 1](https://github.com/lakshminarayanan2k21/VSD_RTL_design_synthesis_workshop/edit/main/README.md)| Introduction to Verilog RTL design and Synthesis|
---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day  Topics Covered
+Day 1  Introduction to Verilog RTL design and Synthesis
 
 
 
