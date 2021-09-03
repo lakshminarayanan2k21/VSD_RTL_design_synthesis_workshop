@@ -44,3 +44,19 @@ Units of time , voltage , power (nw), capcitance(pf)
 .lib is bucket of all the standard cells that are available 
 
 cell marks the begining of the cell definition
+
+
+Hierarchical Synthesis and Flat Synthesis
+
+Module1 
+Module2
+
+stacked PMOS is bad 
+
+
+write_verilog -noattr multiple_module_hier.v
+
+write_verilog -noattr multiple_module_flat.v
+
+flatten  --> command to flatten the hierarchy
+
