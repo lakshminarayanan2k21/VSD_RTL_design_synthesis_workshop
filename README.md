@@ -17,6 +17,30 @@ Day  Topics Covered
 Day 1  Introduction to Verilog RTL design and Synthesis
 
 
+Day 3 
+
+Introduction to dot LIB part1
 
 
+Library follows a naming convention that helps us to identify the three basic parameters .
 
+Process      - Variation due to fabrication. 
+Voltage      - Variation in voltage
+Temperature  - Sensitivity to temperature 
+
+This parameters determine how the silicon works. With all the changes in parameter the silicon is expected to work.
+Basically a silicon will need to work in different parts of geographically working conditions whether it is extreme hot or cold temperatures.
+Even a day also has variations in temperature we can build a chip works only in particular climatic conditions.
+
+sky130_fd_sc_hd_tt_025C_1v80.lib
+
+Here 025C represents 25 Degree
+1v80 as 1.8volts
+tt typical 
+
+Technology - CMOS
+Units of time , voltage , power (nw), capcitance(pf)
+
+.lib is bucket of all the standard cells that are available 
+
+cell marks the begining of the cell definition
