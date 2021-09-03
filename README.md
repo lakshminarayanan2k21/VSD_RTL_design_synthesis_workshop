@@ -56,7 +56,112 @@ stacked PMOS is bad
 
 write_verilog -noattr multiple_module_hier.v
 
-write_verilog -noattr multiple_module_flat.v
+#### Hierarchical synthesis preserves hierarchy and doesnt utilize the standard cells 
+
+read_liberty -lib 
+read_verilog multiple_modules.v
+synth -top multiple_modules.v
+abc -liberty ../my_lib/lib/sky
+
+flatten 
+
+show 
 
 flatten  --> command to flatten the hierarchy
+
+write_verilog -noattr multiple_module_flat.v
+
+sub Module wise synthesize
+
+1. why module level synthesize is preferred when we have multiple instances of same module.
+2. Divide and Conquer --> Instead of giving a massive design we give sub modules and stitch them together at the top.
+
+synth -top submodule1
+
+##Why Flops and Flop Coding Styles
+
+Glitches is caused by the delay through the logic gates in combinational circuits.
+Adding more combinational circuits the outputs will never settle down.
+
+An element to store the value of the combinational output to store them and restrict them.
+The Output of the flop will change only when the clock changes.
+
+##Why Flops and Flop coding styles part1
+  Usage of Flop
+
+##Why Flops and Flop coding styles part2
+  Sync reset , sync set and Async reset along with sync reset and async reset signals in same circuit.
+
+Lab Flop synthesis simulations part1
+ Simulation of all types of dflipflops asynchronus , synchronous resets 
+  dff_asyncres.v
+  dff_async_set.v
+  dff_syncres.v
+
+##Lab Flop synthesis simulations part2
+synthesis of all the above files 
+
+read_verilog dff_asyncres.v
+synth -top dff_asyncres
+dfflibmap -liberty ../mylib/lib/
+only will look for the dff libraries
+
+dff_syncres.v  relaized with inverted reset connected to AND gate connected to flipflop 
+
+##Intersting optimisations part1
+
+mult2 
+ Only append 0 at the end
+ 
+ read_liberty
+ read_verilog mult_2.v
+ synth -top mult_2.v
+ No cells will be infered 
+ 
+##Intersting optimisations part2
+ 
+mult8
+
+###Day3 
+
+###Introduction to Optimizations
+
+##Introduction to optimisations part1
+
+#Combinational Logic Optimization
+ Squeexing the logic to get the most optimised design
+    Area and Power Savings 
+    
+#Constant Propagation
+   Direct Optimisation
+
+y = ((AB)+C)'
+     if A=0 it is relaized as y = C' 
+
+
+#Boolean Logic Optimisation
+  K-Map
+  Quine McKluskey
+
+   assign y = a ? (b?c:(c?a:0)):(!c)
+          
+          y = a'c' + a(bc + b'ac)
+
+          y = a'c' + ac 
+
+##Introduction to optimisations part2
+Sequential Logic Optimization
+Basic
+Sequential Constant propagation      
+Whenever the input is applied to a constant value whether it propagates constant values based on that it depends the values.
+Examples were provided for D input tied to ground and considering set or reset pin as input with output being provided to Nand gate with one of the input as A.
+![image](https://user-images.githubusercontent.com/89997921/132060453-ebf2d975-9c8b-4b6c-a35b-e536d983459c.png)
+Advanced [ Not COvered as part of Lab]
+State Optimisation
+Retiming
+Sequential Logic Cloning ( Floor Plan Aware Synthesis ) 
+##Introduction to optimisations part3
+Combinational Logic Optimization
+Sequential Logic Optimization
+Sequential Logic Optimization for Unused Outputs
 
