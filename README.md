@@ -16,6 +16,22 @@ Workshop Daywise content :-
 Day  Topics Covered
 Day 1  Introduction to Verilog RTL design and Synthesis
 
+  **VERILOG CODE**
+  
+  Command used : **vim good_mux.v**
+  
+  ```verilog
+  module good_mux (input i0 , input i1 , input sel , output reg y);
+  always @ (*)
+  begin 
+         if(sel)
+                  y <= i1;
+          else
+                  y <= i0;
+   end
+   endmodule
+   ```
+  
 
 Day 3 
 
@@ -177,9 +193,20 @@ opt_check3 y = a?(c?b:0):0) --> y= abc
 #Sequential Logic Optimization
 **Lab07 Sequential Logic Optimisations part1
 
-     Note : 
-      
-      ls *df*const*
-      
+```
+ls *df*const*
+```   
+
+![image](https://user-images.githubusercontent.com/89997921/132086038-af7ad8f9-33c3-4e22-8c10-6429c4ff5785.png)
+
+```
+ls gvim -o dff_const1.v -O dff_const2.v
+```   
+
+![image](https://user-images.githubusercontent.com/89997921/132086155-5b3d250b-eff5-440e-a302-b78666bb6e97.png)
+
+**Expected Logic Circuit 
+
+
 #Sequential Logic Optimization for Unused Outputs
 
