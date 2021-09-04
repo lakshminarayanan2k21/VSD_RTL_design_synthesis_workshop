@@ -411,7 +411,16 @@ end
 endmodule
 ```
 Always has * which includes all the changes in the signal used in the block.
-![image](https://user-images.githubusercontent.com/89997921/132089893-2bfb45cb-cbbe-4e8f-9f69-d4f4eb24d1b4.png)
+![image](https://user-images.githubusercontent.com/89997921/132090038-0cdbb7c6-035f-4029-9e2c-759a768e7d43.png)
+
+**BlockingAndNonBlockingStatementsInVerilog**
+
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
+
+**L4 CaveatsWithBlockingStatements**
 
 
 #### Day 5
