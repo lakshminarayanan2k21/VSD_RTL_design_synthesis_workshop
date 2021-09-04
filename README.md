@@ -143,11 +143,11 @@ mult2
  
 mult8
 
-### Day3 
+##### Day3 
 
-### Introduction to Optimizations
+#### Introduction to Optimizations
 
-## Introduction to optimisations part1
+### Introduction to optimisations part1
 
 # Combinational Logic Optimization
  Squeexing the logic to get the most optimised design
@@ -170,22 +170,27 @@ y = ((AB)+C)'
 
           y = a'c' + ac 
 
-## Introduction to optimisations part2
-Sequential Logic Optimization
-Basic
-Sequential Constant propagation      
+### Introduction to optimisations part2
+ *Sequential Logic Optimization*
+ *Basic*
+ *Sequential Constant propagation*      
+
 Whenever the input is applied to a constant value whether it propagates constant values based on that it depends the values.
 Examples were provided for D input tied to ground and considering set or reset pin as input with output being provided to Nand gate with one of the input as A.
+
 ![image](https://user-images.githubusercontent.com/89997921/132060453-ebf2d975-9c8b-4b6c-a35b-e536d983459c.png)
+
 Advanced [ Not COvered as part of Lab]
+
 ## Introduction to optimisations part3
-State Optimisation
+*State Optimisation*
 Retiming --> usefulness of slack to get the benefit of performance 
 Sequential Logic Cloning ( Floor Plan Aware Synthesis ) 
-Having two copies of A to resolve the timing issues 
-
+**Having two copies of A to resolve the timing issues** 
 ![image](https://user-images.githubusercontent.com/89997921/132061335-6cf9d906-ae5a-4686-9353-3080cc4780fa.png)
-Combinational Logic Optimization
+
+##Combinational Logic Optimization
+
 **Lab06 Combinational Logic Optimisations part1**
 verilog_files> ls *opt*
 opt_check2.v opt_check3.v opt_check.v  lab ( opt_check4.v multiple_module_opt.v multiple_module_opt.v )
@@ -195,7 +200,7 @@ after synth -top opt_check
 opt_clean -purge --> command to do optimization
 opt_check2 Inverted NAND gate
 opt_check3 y = a?(c?b:0):0) --> y= abc
-#Sequential Logic Optimization
+## Sequential Logic Optimization
 **Lab07 Sequential Logic Optimisations part1**
 
 ```
@@ -358,6 +363,11 @@ The Circuit relaized with more flops and has input D Flip flop followed by count
 
 #### Day 4
 
+**Introdcution Gate Level Simulation (GLS)**
+*What is GLS*
+![image](https://user-images.githubusercontent.com/89997921/132088560-6069419b-621d-4fda-ba0a-72f01fe75c3d.png)
+*Timing Aware GLS needs back annotation with standard delay formats considered*
+![image](https://user-images.githubusercontent.com/89997921/132088651-691c20bf-e6ed-4111-b370-a524c87b5cd1.png)
 
 
 
