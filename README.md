@@ -13,11 +13,11 @@ Workshop Daywise content :-
 
 
 ## Day Wise Contents 
-1. [Day1](#Day1)
-2. [Day2](#Day2)
-3. [Day3](#Day3)
-4. [Day4](#Day4)
-5. [Day5](#Day5)
+1. [Day1](#Day1 Introduction to Verilog RTL design and Synthesis)
+2. [Day2](#Day2 Timing libs, hierarchical vs flat synthesis and efficient flop coding styles)
+3. [Day3](#Day3 Combinational and sequential optmizations)
+4. [Day4](#Day4 GLS, blocking vs non-blocking and Synthesis-Simulation mismatch)
+5. [Day5](#Day5 Optimization in synthesis)
 
 
 # 
@@ -26,7 +26,7 @@ Day  Topics Covered
 Day 1  Introduction to Verilog RTL design and Synthesis
 
 
-#### Day1
+#### Day1 Introduction to Verilog RTL design and Synthesis
 
   **VERILOG CODE**
   
@@ -45,7 +45,7 @@ Day 1  Introduction to Verilog RTL design and Synthesis
    ```
   
 
-#### Day2
+#### Day2 Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
 
 ## Introduction to dot LIB part1
 
@@ -150,7 +150,7 @@ mult2
  
 mult8
 
-##### Day3 
+##### Day3 Combinational and sequential optmizations
 
 #### Introduction to Optimizations
 
@@ -368,7 +368,7 @@ yosys>show
 The Circuit relaized with more flops and has input D Flip flop followed by counters
 ```
 
-#### Day4
+#### Day4 GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
 **Introdcution Gate Level Simulation (GLS)**
 **What is GLS**
@@ -430,4 +430,4 @@ Always has * which includes all the changes in the signal used in the block.
 **L4 CaveatsWithBlockingStatements**
 
 
-#### Day5
+#### Day5 Optimization in synthesis
