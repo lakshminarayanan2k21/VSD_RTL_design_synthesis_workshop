@@ -16,6 +16,11 @@ Workshop Daywise content :-
 Day  Topics Covered
 Day 1  Introduction to Verilog RTL design and Synthesis
 
+
+#### Day 1
+
+#### Day 2
+
   **VERILOG CODE**
   
   Command used : **vim good_mux.v**
@@ -33,7 +38,7 @@ Day 1  Introduction to Verilog RTL design and Synthesis
    ```
   
 
-Day 3 
+#### Day 3 
 
 ## Introduction to dot LIB part1
 
@@ -351,3 +356,9 @@ yosys>show
 The Circuit relaized with more flops and has input D Flip flop followed by counters
 ```
 
+#### Day 4
+
+
+
+
+#### Day 5
