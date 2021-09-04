@@ -580,6 +580,11 @@ yosys>write_verilog -noattr bad_mux_net.v
  ./a.out  --> VCD file generation
  gtkwave tb_bad_mux.vcd
 ```
+**simulation result**
+![image](https://user-images.githubusercontent.com/89997921/132093529-2d2ba047-956d-4fbc-8072-6bf8d53ef7e5.png)
+
+
+
 ***L1 Lab Synth sim mismatch blocking statement part1***
 
 ***L2 Lab Synth sim mismatch blocking statement part2***
