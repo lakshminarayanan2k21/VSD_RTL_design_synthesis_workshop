@@ -493,6 +493,21 @@ end
 endmodule
 ```
 
+![image](https://user-images.githubusercontent.com/89997921/132092144-79498036-8755-49b5-87aa-39497b9bc0e2.png)
+
+*Might mimic a flop based behaviour but when synthesized will not have a flop*
+
+```verilog
+module code(input a,b,c , output reg y);
+reg qo;
+always @(*)
+begin
+   qo = a | b;
+   y = qo & c;
+end
+endmodule
+```
+![image](https://user-images.githubusercontent.com/89997921/132092200-209ab0eb-ef6c-44b6-8585-93c5bb3a4ee0.png)
 
 
 #### Day5
