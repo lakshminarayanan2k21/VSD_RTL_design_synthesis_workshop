@@ -512,12 +512,14 @@ endmodule
 This makes necesaary to run GLS and check the behaviour of the circuit obtained and conclude that there is no Simulation and synthesis mismatch.
 
 ***L1 Lab GLS Synth Sim Mismatch part1***
- Needed inputs
+ 
+  Needed inputs
    - Netlist
    - Verilog Models
    - Testbench
- Output
+  Output
    - vcd
+  
  
 ***L2 Lab GLS Synth Sim Mismatch part2***
 
