@@ -209,7 +209,9 @@ ls gvim -o dff_const1.v -O dff_const2.v
 
 ![image](https://user-images.githubusercontent.com/89997921/132086248-8936f29c-b4d2-4160-b414-8a4dc7cd8fd6.png)
 
+
 **Actual Realized circuit
+
 ![image](https://user-images.githubusercontent.com/89997921/132086264-ca92527b-1bbf-4466-ad01-a92d081e10cc.png)
 
 
