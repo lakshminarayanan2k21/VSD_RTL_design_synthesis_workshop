@@ -415,9 +415,12 @@ Always has * which includes all the changes in the signal used in the block.
 
 **BlockingAndNonBlockingStatementsInVerilog**
 
-* Item 1
-* Item 2
-   * Iteam 2a
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [Collaboration](#collaboration)
+5. [FAQs](#faqs)
 
 **L4 CaveatsWithBlockingStatements**
 
