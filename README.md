@@ -11,7 +11,16 @@ Skywater 130nm Standard Cell Libraries
 
 Workshop Daywise content :- 
 
-# Day Wise Contents 
+
+## Day Wise Contents 
+1. [Day1](#Day1)
+2. [Day2](#Day2)
+3. [Day3](#Day3)
+4. [Day4](#Day4)
+5. [Day5](#Day5)
+
+
+# 
 
 Day  Topics Covered
 Day 1  Introduction to Verilog RTL design and Synthesis
@@ -415,12 +424,6 @@ Always has * which includes all the changes in the signal used in the block.
 
 **BlockingAndNonBlockingStatementsInVerilog**
 
-## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
 
 **L4 CaveatsWithBlockingStatements**
 
