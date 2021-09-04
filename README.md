@@ -509,6 +509,7 @@ endmodule
 ```
 ![image](https://user-images.githubusercontent.com/89997921/132092200-209ab0eb-ef6c-44b6-8585-93c5bb3a4ee0.png)
 
+This makes necesaary to run GLS and check the behaviour of the circuit obtained and conclude that there is no Simulation and synthesis mismatch.
 
 #### Day5
 ***Optimization in synthesis***
