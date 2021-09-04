@@ -35,7 +35,7 @@ Day 1  Introduction to Verilog RTL design and Synthesis
 
 Day 3 
 
-Introduction to dot LIB part1
+## Introduction to dot LIB part1
 
 
 Library follows a naming convention that helps us to identify the three basic parameters .
