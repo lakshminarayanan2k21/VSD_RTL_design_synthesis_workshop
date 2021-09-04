@@ -415,10 +415,9 @@ Always has * which includes all the changes in the signal used in the block.
 
 **BlockingAndNonBlockingStatementsInVerilog**
 
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
+* Item 1
+* Item 2
+   * Iteam 2a
 
 **L4 CaveatsWithBlockingStatements**
 
