@@ -643,6 +643,12 @@ iverilog ../mylib/verilog_model/primitives.v ../my_lib/verilog_model/sky13_fd_sc
 ***Optimization in synthesis***
 
 **L1 IF CASE Constructs part1**
+ 
+ If 
+   - Priority logic
+ case
+ 
+
 **L2 IF CASE Constructs part2**
 **L3 IF CASE Constructs part3**
 **L1 Lab Incomplete IF part1**
