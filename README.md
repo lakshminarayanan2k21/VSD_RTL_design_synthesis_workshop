@@ -411,9 +411,7 @@ end
 endmodule
 ```
 Always has * which includes all the changes in the signal used in the block.
-
-![image](https://user-images.githubusercontent.com/89997921/132089051-69294a68-061f-4e34-a23f-25195c923f95.png)
-
+![image](https://user-images.githubusercontent.com/89997921/132089893-2bfb45cb-cbbe-4e8f-9f69-d4f4eb24d1b4.png)
 
 
 #### Day 5
