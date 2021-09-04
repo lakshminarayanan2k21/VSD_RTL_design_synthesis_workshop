@@ -583,12 +583,72 @@ yosys>write_verilog -noattr bad_mux_net.v
 **simulation result**
 ![image](https://user-images.githubusercontent.com/89997921/132093529-2d2ba047-956d-4fbc-8072-6bf8d53ef7e5.png)
 
-
-
 ***L1 Lab Synth sim mismatch blocking statement part1***
+
+*Aim  :y= ( (A+B)*C) * 
+
+```verilog
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+begin
+	d = x & c;
+	x = a | b;
+end
+endmodule
+```
+
+Problem is code is implemented as blocking statement
+
+```
+ iverilog blocking_caveat.v tb_blocking_caveat.v
+ ./a.out  --> VCD file generation
+ gtkwave tb_blocking_caveat.vcd
+```
+*RTL Simulation*
+![image](https://user-images.githubusercontent.com/89997921/132093774-b5eaa25c-0476-4a05-916a-67eb66095f00.png)
 
 ***L2 Lab Synth sim mismatch blocking statement part2***
 
+*Netlist Simulation*
+
+```
+yosys
+yosys>read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog blocking_caveat.v
+yosys> synth -top blocking_caveat
+yosys>abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>write_verilog -noattr blocking_caveat_net.v
+yosys>show
+```
+*NEtlist * 
+![image](https://user-images.githubusercontent.com/89997921/132093848-ee16a45d-454e-4f2a-a93d-667253f11961.png)
+
+```
+iverilog ../mylib/verilog_model/primitives.v ../my_lib/verilog_model/sky13_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+ ./a.out  --> VCD file generation
+ gtkwave blocking_caveat.vcd
+```
+
+*Simulation mismatch between RTL and Netlist*
+![image](https://user-images.githubusercontent.com/89997921/132094005-ea20911d-14ea-4ca3-8b51-c73e69a3c272.png)
 
 #### Day5
 ***Optimization in synthesis***
+
+**L1 IF CASE Constructs part1**
+**L2 IF CASE Constructs part2**
+**L3 IF CASE Constructs part3**
+**L1 Lab Incomplete IF part1**
+**L2 Lab Incomplete IF part2**
+**L1 Lab incomplete overlapping Case part1**
+**L2 Lab incomplete overlapping Case part2**
+**L3 Lab incomplete overlapping Case part3**
+**L4 Lab incomplete overlapping Case part4**
+**L1 For Loop and For Generate part1**
+**L2 For Loop and For Generate part2**
+**L3 For Loop and For Generate part3**
+**L1 Lab For and For Generate part1**
+**L2 Lab For and For Generate part2**
+**L3 Lab For and For Generate part3**
+**L4 Lab For and For Generate part4**
