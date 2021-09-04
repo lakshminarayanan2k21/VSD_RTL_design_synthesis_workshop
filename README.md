@@ -247,9 +247,21 @@ iverilog dff_const3.v tb_dff_const3.v
 ./a.out
 gtkwave tb_dff_const3.vcd
 ```
+![image](https://user-images.githubusercontent.com/89997921/132087168-b5df61bc-8450-4804-ad24-9051705f896a.png)
+
+```
+yosys
+yosys>read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog dff_const3.v
+yosys> synth -top dff_const3
+yosys>dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>show
+```
+![image](https://user-images.githubusercontent.com/89997921/132087300-9abfb2f9-2e14-4f73-adba-bbee09c6919e.png)
 
 **Synthesis Result dff_const4**
 **Synthesis Result dff_const5**
-
 # Sequential Logic Optimization for Unused Outputs
-
+**L1 Seq optimisation unused outputs part1**
+Unused Output Optimization
