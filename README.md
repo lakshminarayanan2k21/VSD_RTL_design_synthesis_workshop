@@ -13,7 +13,7 @@ Workshop Daywise content :-
 
 
 ## Day Wise Contents 
-1. [Day1](#Day1 Introduction to Verilog RTL design and Synthesis)
+1. [Day1](#Day1) Introduction to Verilog RTL design and Synthesis
 2. [Day2](#Day2 Timing libs, hierarchical vs flat synthesis and efficient flop coding styles)
 3. [Day3](#Day3 Combinational and sequential optmizations)
 4. [Day4](#Day4 GLS, blocking vs non-blocking and Synthesis-Simulation mismatch)
