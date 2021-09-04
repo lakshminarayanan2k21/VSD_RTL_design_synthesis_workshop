@@ -26,7 +26,8 @@ Day  Topics Covered
 Day 1  Introduction to Verilog RTL design and Synthesis
 
 
-#### Day1 Introduction to Verilog RTL design and Synthesis
+#### Day1
+***Introduction to Verilog RTL design and Synthesis***
 
   **VERILOG CODE**
   
@@ -45,7 +46,8 @@ Day 1  Introduction to Verilog RTL design and Synthesis
    ```
   
 
-#### Day2 Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
+#### Day2
+***Timing libs, hierarchical vs flat synthesis and efficient flop coding styles***
 
 ## Introduction to dot LIB part1
 
