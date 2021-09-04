@@ -310,6 +310,7 @@ yosys>show
 ![image](https://user-images.githubusercontent.com/89997921/132087701-f3e87ba6-cb58-461a-aaed-d3e0794df0cc.png)
 
 **L1 Seq optimisation unused outputs part2**
+
 *Case 2 with using all the output logic*
 
 ```verilog
