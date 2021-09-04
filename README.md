@@ -526,7 +526,27 @@ This makes necesaary to run GLS and check the behaviour of the circuit obtained 
 ```
  gvim ternary_operator_mux.v -o bad_mux.v -o good_mux.v
 ```
+  *Simulation of file*
  
+```
+ iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+ ./a.out  --> VCD file generation
+ gtkwave tb_ternary_operator_mux.vcd
+```
+**Synthesis **
+
+```
+yosys
+yosys>read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog tb_ternary_operator_mux.v
+yosys> synth -top tb_ternary_operator_mux
+yosys>dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>show
+```
+ **Synthesis Report**
+ ![image](https://user-images.githubusercontent.com/89997921/132092635-f85cf1bd-de66-49e0-8dd9-48c18797bdf0.png)
+
  
 ***L2 Lab GLS Synth Sim Mismatch part2***
 
