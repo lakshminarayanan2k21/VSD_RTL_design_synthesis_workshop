@@ -94,7 +94,7 @@ sub Module wise synthesize
 
 synth -top submodule1
 
-##Why Flops and Flop Coding Styles
+## Why Flops and Flop Coding Styles
 
 Glitches is caused by the delay through the logic gates in combinational circuits.
 Adding more combinational circuits the outputs will never settle down.
@@ -102,10 +102,10 @@ Adding more combinational circuits the outputs will never settle down.
 An element to store the value of the combinational output to store them and restrict them.
 The Output of the flop will change only when the clock changes.
 
-##Why Flops and Flop coding styles part1
+## Why Flops and Flop coding styles part1
   Usage of Flop
 
-##Why Flops and Flop coding styles part2
+## Why Flops and Flop coding styles part2
   Sync reset , sync set and Async reset along with sync reset and async reset signals in same circuit.
 
 Lab Flop synthesis simulations part1
@@ -124,7 +124,7 @@ only will look for the dff libraries
 
 dff_syncres.v  relaized with inverted reset connected to AND gate connected to flipflop 
 
-##Intersting optimisations part1
+## Intersting optimisations part1
 
 mult2 
  Only append 0 at the end
@@ -134,21 +134,21 @@ mult2
  synth -top mult_2.v
  No cells will be infered 
  
-##Intersting optimisations part2
+## Intersting optimisations part2
  
 mult8
 
-###Day3 
+### Day3 
 
-###Introduction to Optimizations
+### Introduction to Optimizations
 
-##Introduction to optimisations part1
+## Introduction to optimisations part1
 
-#Combinational Logic Optimization
+# Combinational Logic Optimization
  Squeexing the logic to get the most optimised design
     Area and Power Savings 
     
-#Constant Propagation
+# Constant Propagation
    Direct Optimisation
 
 y = ((AB)+C)'
@@ -165,7 +165,7 @@ y = ((AB)+C)'
 
           y = a'c' + ac 
 
-##Introduction to optimisations part2
+## Introduction to optimisations part2
 Sequential Logic Optimization
 Basic
 Sequential Constant propagation      
@@ -173,7 +173,7 @@ Whenever the input is applied to a constant value whether it propagates constant
 Examples were provided for D input tied to ground and considering set or reset pin as input with output being provided to Nand gate with one of the input as A.
 ![image](https://user-images.githubusercontent.com/89997921/132060453-ebf2d975-9c8b-4b6c-a35b-e536d983459c.png)
 Advanced [ Not COvered as part of Lab]
-##Introduction to optimisations part3
+## Introduction to optimisations part3
 State Optimisation
 Retiming --> usefulness of slack to get the benefit of performance 
 Sequential Logic Cloning ( Floor Plan Aware Synthesis ) 
@@ -181,7 +181,7 @@ Having two copies of A to resolve the timing issues
 
 ![image](https://user-images.githubusercontent.com/89997921/132061335-6cf9d906-ae5a-4686-9353-3080cc4780fa.png)
 Combinational Logic Optimization
-#Lab06 Combinational Logic Optimisations part1 
+# Lab06 Combinational Logic Optimisations part1 
 verilog_files> ls *opt*
 opt_check2.v opt_check3.v opt_check.v  lab ( opt_check4.v multiple_module_opt.v multiple_module_opt.v )
 opt_check.v Mux optimized to AND gate
@@ -191,7 +191,7 @@ opt_clean -purge --> command to do optimization
 opt_check2 Inverted NAND gate
 opt_check3 y = a?(c?b:0):0) --> y= abc
 #Sequential Logic Optimization
-**Lab07 Sequential Logic Optimisations part1
+**Lab07 Sequential Logic Optimisations part1**
 
 ```
 ls *df*const*
@@ -205,16 +205,19 @@ ls gvim -o dff_const1.v -O dff_const2.v
 
 ![image](https://user-images.githubusercontent.com/89997921/132086155-5b3d250b-eff5-440e-a302-b78666bb6e97.png)
 
-**Expected Logic Circuit**
+**Expected Logic Circuit for dff_const1**
 
 ![image](https://user-images.githubusercontent.com/89997921/132086248-8936f29c-b4d2-4160-b414-8a4dc7cd8fd6.png)
 
 
-**Actual Realized circuit**
+**Actual Realized circuit dff_const1**
 
 ![image](https://user-images.githubusercontent.com/89997921/132086264-ca92527b-1bbf-4466-ad01-a92d081e10cc.png)
 
+**Actual Realized circuit dff_const2**
+
+![image](https://user-images.githubusercontent.com/89997921/132086343-a9a69c59-196a-4399-8f93-6747271943cd.png)
 
 
-#Sequential Logic Optimization for Unused Outputs
+# Sequential Logic Optimization for Unused Outputs
 
