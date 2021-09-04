@@ -267,6 +267,22 @@ yosys>show
 
 Unused Output Optimization
 
+```verilog
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = count[0];
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+
 ![image](https://user-images.githubusercontent.com/89997921/132087503-75d79b4f-fe4f-4694-a822-803ae729576f.png)
 
 ```
@@ -293,3 +309,21 @@ yosys>show
 
 ![image](https://user-images.githubusercontent.com/89997921/132087701-f3e87ba6-cb58-461a-aaed-d3e0794df0cc.png)
 
+**L1 Seq optimisation unused outputs part2**
+*Case 2 with using all the output logic*
+
+```verilog
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = (count[2:0] == 3'b100);
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
