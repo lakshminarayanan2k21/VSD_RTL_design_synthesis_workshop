@@ -374,6 +374,46 @@ The Circuit relaized with more flops and has input D Flip flop followed by count
 ![image](https://user-images.githubusercontent.com/89997921/132088763-a4dbc8a2-bdc3-4c7b-b8c4-69ae3c9cbfb7.png)
 
 **Synthesis Simulation mismatch**
+*L2 SynthesisSimulationMismatch*
+-- Missing Sesitivity List 
+-- Blocking Vs Non-Blocking Assignments
+-- Non Standard Verilog Coding
+
+*Simulator outputs are driven based on activity*
+
+```verilog
+module mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+*Mux is no fully implemented due to missing sensitivity list*
+```
+Always evaluated only sel is changing if no change in sel no evaluation.
+The changes in i1 and i0 are passed to output only when sel is changing.
+Because of this 
+```
+
+```verilog
+module mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(*)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+Always has * which includes all the changes in the signal used in the block.
+
+![image](https://user-images.githubusercontent.com/89997921/132089051-69294a68-061f-4e34-a23f-25195c923f95.png)
+
 
 
 #### Day 5
