@@ -152,7 +152,8 @@ mult2
  
 mult8
 
-##### Day3 Combinational and sequential optmizations
+##### Day3 
+***Combinational and sequential optmizations***
 
 #### Introduction to Optimizations
 
@@ -370,7 +371,8 @@ yosys>show
 The Circuit relaized with more flops and has input D Flip flop followed by counters
 ```
 
-#### Day4 GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+#### Day4
+***GLS, blocking vs non-blocking and Synthesis-Simulation mismatch***
 
 **Introdcution Gate Level Simulation (GLS)**
 **What is GLS**
@@ -432,4 +434,5 @@ Always has * which includes all the changes in the signal used in the block.
 **L4 CaveatsWithBlockingStatements**
 
 
-#### Day5 Optimization in synthesis
+#### Day5
+***Optimization in synthesis***
