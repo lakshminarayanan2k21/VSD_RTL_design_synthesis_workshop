@@ -26,9 +26,7 @@ Day  Topics Covered
 Day 1  Introduction to Verilog RTL design and Synthesis
 
 
-#### Day 1
-
-#### Day 2
+#### Day1
 
   **VERILOG CODE**
   
@@ -47,7 +45,7 @@ Day 1  Introduction to Verilog RTL design and Synthesis
    ```
   
 
-#### Day 3 
+#### Day2
 
 ## Introduction to dot LIB part1
 
@@ -370,7 +368,7 @@ yosys>show
 The Circuit relaized with more flops and has input D Flip flop followed by counters
 ```
 
-#### Day 4
+#### Day4
 
 **Introdcution Gate Level Simulation (GLS)**
 **What is GLS**
@@ -428,4 +426,4 @@ Always has * which includes all the changes in the signal used in the block.
 **L4 CaveatsWithBlockingStatements**
 
 
-#### Day 5
+#### Day5
