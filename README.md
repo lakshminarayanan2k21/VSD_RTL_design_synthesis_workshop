@@ -426,10 +426,11 @@ Always has * which includes all the changes in the signal used in the block.
 
 **BlockingAndNonBlockingStatementsInVerilog**
 
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
+ Inside Always block
+   - = --> Blocking
+     - Executes the statement in the order it is written
+     - So the first statement is evaluated before the second statement.
+
 
 **L4 CaveatsWithBlockingStatements**
 
