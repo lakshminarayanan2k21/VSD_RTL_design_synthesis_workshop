@@ -274,3 +274,14 @@ We have unused ports in the output port
 ```
 
 ![image](https://user-images.githubusercontent.com/89997921/132087575-80732a08-a381-4901-ab71-6fd23e288279.png)
+
+```
+yosys
+yosys>read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog counter_opt.v
+yosys> synth -top counter_opt
+![image](https://user-images.githubusercontent.com/89997921/132087665-1de3801a-297d-4a0e-8cc7-044656fb845e.png)
+yosys>dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>show
+```
