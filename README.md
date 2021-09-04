@@ -1,7 +1,13 @@
 # RTL Design and Synthesis using Verilog with SKY130 technology
 ![image](https://user-images.githubusercontent.com/89997921/131890710-6d1b156b-06cf-4183-b817-9f713338d517.png)
 ### About the Workshop 
-Workshop intends to teach the verilog coding guidelines that results in predictable logic in Silicon. it is important to note that every verilog code is not synthesizable and even if it is , it may result in different logic depending on the coding styles used. The course details all these aspects of the Verilog HDL with theory and backed with lot of practical examples. Workshop introduces to the digital logic design using Verilog HDL . Validating the functionality of the design using Functional Simulation. Writing Test Benches to validate the functionality of the RTL design . Logic synthesis of the Functional RTL Code. Gate Level Simulation of the Synthesized Netlist.
+   - Teach verilog coding guidelines resulting in predictable logic in Silicon
+   - Importance of verilog code synthesizing to expected behaviour depends on coding styles used
+   - The course details all these aspects of the Verilog HDL with theory and backed with lot of practical examples
+   - Workshop introduces to the digital logic design using Verilog HDL
+   - Validating the functionality of the design using Functional Simulation
+   - Handon with functionsl and GLS test bench using iverilog & gtkwave for RTL and Netlist
+   - Logic synthesis of the Functional RTL Code. 
 
 ### Tools Used
 
