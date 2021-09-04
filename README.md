@@ -264,4 +264,8 @@ yosys>show
 **Synthesis Result dff_const5**
 # Sequential Logic Optimization for Unused Outputs
 **L1 Seq optimisation unused outputs part1**
+
 Unused Output Optimization
+
+![image](https://user-images.githubusercontent.com/89997921/132087503-75d79b4f-fe4f-4694-a822-803ae729576f.png)
+
