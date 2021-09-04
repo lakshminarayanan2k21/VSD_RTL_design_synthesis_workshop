@@ -646,11 +646,37 @@ iverilog ../mylib/verilog_model/primitives.v ../my_lib/verilog_model/sky13_fd_sc
  
  If 
    - Priority logic
+ 
  case
  
+ *Inference of If Else statement* 
+ 
+ ![image](https://user-images.githubusercontent.com/89997921/132094840-93e6aca8-6809-4b39-a209-213034aee876.png)
+
+ *Danger / Caution with if => Inferred latched ( Bad Coding style)* 
+ ```
+if(cond1)
+   y=a;
+else if(cond2)
+   y = b
+   
+```
+
+Inference of Latch unintentionally
+
+![image](https://user-images.githubusercontent.com/89997921/132094948-3a9f151c-1b8d-4679-b78d-028098c04eec.png)
 
 **L2 IF CASE Constructs part2**
+
+*Counter using intentionally a latch to hold the earlier value*
+
+![image](https://user-images.githubusercontent.com/89997921/132095054-b16fbcea-df39-4215-a737-4e8a799932d3.png)
+
+
 **L3 IF CASE Constructs part3**
+
+
+
 **L1 Lab Incomplete IF part1**
 **L2 Lab Incomplete IF part2**
 **L1 Lab incomplete overlapping Case part1**
