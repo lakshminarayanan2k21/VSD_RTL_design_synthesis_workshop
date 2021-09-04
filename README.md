@@ -517,9 +517,16 @@ This makes necesaary to run GLS and check the behaviour of the circuit obtained 
    - Netlist
    - Verilog Models
    - Testbench
+  
   Output
    - vcd
-  
+   
+ *Used files for the lab*
+ 
+```
+ gvim ternary_operator_mux.v -o bad_mux.v -o good_mux.v
+```
+ 
  
 ***L2 Lab GLS Synth Sim Mismatch part2***
 
