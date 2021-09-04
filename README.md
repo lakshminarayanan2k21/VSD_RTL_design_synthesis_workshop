@@ -544,12 +544,42 @@ yosys>dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 yosys>abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 yosys>show
 ```
- **Synthesis Report**
+**Synthesis Report**
  ![image](https://user-images.githubusercontent.com/89997921/132092635-f85cf1bd-de66-49e0-8dd9-48c18797bdf0.png)
 
+**Netlist**
+![image](https://user-images.githubusercontent.com/89997921/132092725-b8b6aabb-7b63-4902-8b18-7e57aaa26220.png)
  
+**GLS Steps**
+```
+ iverilog ../mylib/verilog_model/primitives.v ../my_lib/verilog_model/sky13_fd_sc_hd.v ternary_perator_mux_net.v tb_ternary_operator_=mux.v
+ ./a.out  --> VCD file generation
+ gtkwave ternary_perator_mux.vcd
+```
 ***L2 Lab GLS Synth Sim Mismatch part2***
 
+```
+ iverilog bad_mux.v tb_bad_mux.v
+ ./a.out  --> VCD file generation
+ gtkwave tb_bad_mux.vcd
+```
+
+```
+yosys
+yosys>read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog bad_mux.v
+yosys> synth -top bad_mux
+yosys>abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>show
+yosys>write_verilog -noattr bad_mux_net.v
+```
+
+
+```
+ iverilog ../mylib/verilog_model/primitives.v ../my_lib/verilog_model/sky13_fd_sc_hd.v ternary_perator_mux_net.v tb_bad_mux.v
+ ./a.out  --> VCD file generation
+ gtkwave tb_bad_mux.vcd
+```
 ***L1 Lab Synth sim mismatch blocking statement part1***
 
 ***L2 Lab Synth sim mismatch blocking statement part2***
