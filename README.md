@@ -181,7 +181,7 @@ Having two copies of A to resolve the timing issues
 
 ![image](https://user-images.githubusercontent.com/89997921/132061335-6cf9d906-ae5a-4686-9353-3080cc4780fa.png)
 Combinational Logic Optimization
-# Lab06 Combinational Logic Optimisations part1 
+**Lab06 Combinational Logic Optimisations part1**
 verilog_files> ls *opt*
 opt_check2.v opt_check3.v opt_check.v  lab ( opt_check4.v multiple_module_opt.v multiple_module_opt.v )
 opt_check.v Mux optimized to AND gate
@@ -218,6 +218,33 @@ ls gvim -o dff_const1.v -O dff_const2.v
 
 ![image](https://user-images.githubusercontent.com/89997921/132086343-a9a69c59-196a-4399-8f93-6747271943cd.png)
 
+**Syntehsis Result dff_const1**
+
+![image](https://user-images.githubusercontent.com/89997921/132086464-56fdbbe6-9447-4cc6-8625-1e9843e5f69b.png)
+
+Since library uses active low reset and our code uses active high there is one inverter in the path of the reset.
+
+**Lab07 Sequential Logic Optimisations part2**
+
+
+**Synthesis Result dff_const2**
+
+![image](https://user-images.githubusercontent.com/89997921/132086614-611bb639-a2eb-44b6-89b1-7849c4b57877.png)
+
+Since there is no usage of input and output there is no logic cell realized in the circuit after synthesis.
+
+**Synthesis Result dff_const3**
+![image](https://user-images.githubusercontent.com/89997921/132086749-178ede40-5cc6-4f4d-acda-4827b3ca95dc.png)
+
+```
+Question : Whether the flops will be optimized ?
+Answer   : Not it can't be optimized the answer is in the below waveform
+```
+![image](https://user-images.githubusercontent.com/89997921/132087038-02c30dba-d3e3-42cf-83b2-5466e2b1e321.png)
+
+
+**Synthesis Result dff_const4**
+**Synthesis Result dff_const5**
 
 # Sequential Logic Optimization for Unused Outputs
 
