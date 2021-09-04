@@ -427,9 +427,12 @@ Always has * which includes all the changes in the signal used in the block.
 **BlockingAndNonBlockingStatementsInVerilog**
 
  Inside Always block
-   - = --> Blocking
+   - *=*  Blocking
      - Executes the statement in the order it is written
-     - So the first statement is evaluated before the second statement.
+     - So the first statement is evaluated before the second statement
+   - *<=*  Non Blocking
+     - Executes all the RHS when always block is entered and assigns to LHS
+     - Parallel Evaluation
 
 
 **L4 CaveatsWithBlockingStatements**
