@@ -165,9 +165,7 @@ Having two copies of A to resolve the timing issues
 
 ![image](https://user-images.githubusercontent.com/89997921/132061335-6cf9d906-ae5a-4686-9353-3080cc4780fa.png)
 Combinational Logic Optimization
-
-Lab06 Combinational Logic Optimisations part1 
-
+#Lab06 Combinational Logic Optimisations part1 
 verilog_files> ls *opt*
 opt_check2.v opt_check3.v opt_check.v  lab ( opt_check4.v multiple_module_opt.v multiple_module_opt.v )
 opt_check.v Mux optimized to AND gate
@@ -176,6 +174,12 @@ after synth -top opt_check
 opt_clean -purge --> command to do optimization
 opt_check2 Inverted NAND gate
 opt_check3 y = a?(c?b:0):0) --> y= abc
-Sequential Logic Optimization
-Sequential Logic Optimization for Unused Outputs
+#Sequential Logic Optimization
+**Lab07 Sequential Logic Optimisations part1
+
+     Note : 
+      
+      ls *df*const*
+      
+#Sequential Logic Optimization for Unused Outputs
 
