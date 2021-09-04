@@ -427,12 +427,35 @@ Always has * which includes all the changes in the signal used in the block.
 **BlockingAndNonBlockingStatementsInVerilog**
 
  Inside Always block
-   - *=*  Blocking
+   - =  Blocking
      - Executes the statement in the order it is written
      - So the first statement is evaluated before the second statement
-   - *<=*  Non Blocking
+   - <=  Non Blocking
      - Executes all the RHS when always block is entered and assigns to LHS
      - Parallel Evaluation
+
+**Cavets with Blocking statements**
+
+
+```verilog
+module dff_const1(input clk, input reset, input d, output reg q);
+reg q0;
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q0 = 1'b0;
+		q  = 1'b0;
+	else
+		q  = q0;
+		q0 = d;
+
+end
+
+endmodule
+```
+*Blocking statements execution realizes to different circuit based on the coding*
+![image](https://user-images.githubusercontent.com/89997921/132091912-eff25621-247c-4097-9eae-515a8e749bd9.png)
+
 
 
 **L4 CaveatsWithBlockingStatements**
