@@ -686,7 +686,8 @@ Inference of Latch unintentionally
 
 ![image](https://user-images.githubusercontent.com/89997921/132095564-cb91167b-4a56-4a97-9404-7df9c225e410.png)
 
-*Cavets with case -3 *
+*Cavets with case -3 --> No overlapping case statements*
+![image](https://user-images.githubusercontent.com/89997921/132095703-93cf3cb5-04a6-45dd-8e4b-44e123338f5b.png)
 
 
 **L1 Lab Incomplete IF part1**
