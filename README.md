@@ -644,7 +644,7 @@ iverilog ../mylib/verilog_model/primitives.v ../my_lib/verilog_model/sky13_fd_sc
 
 **L1 IF CASE Constructs part1**
  
- If 
+ If .. else statement
    - Priority logic
  
  case
@@ -672,9 +672,21 @@ Inference of Latch unintentionally
 
 ![image](https://user-images.githubusercontent.com/89997921/132095054-b16fbcea-df39-4215-a737-4e8a799932d3.png)
 
+*case statement*
+
+![image](https://user-images.githubusercontent.com/89997921/132095156-7ebc3cbc-94af-4abb-8315-c167167f96a6.png)
+
+*Cavets with case-1*
+
+![image](https://user-images.githubusercontent.com/89997921/132095399-56478907-981e-43d7-8473-049c467d1ddb.png)
 
 **L3 IF CASE Constructs part3**
 
+*Cavets with case -2 *
+
+![image](https://user-images.githubusercontent.com/89997921/132095564-cb91167b-4a56-4a97-9404-7df9c225e410.png)
+
+*Cavets with case -3 *
 
 
 **L1 Lab Incomplete IF part1**
