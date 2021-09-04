@@ -364,11 +364,16 @@ The Circuit relaized with more flops and has input D Flip flop followed by count
 #### Day 4
 
 **Introdcution Gate Level Simulation (GLS)**
-*What is GLS*
+**What is GLS**
 ![image](https://user-images.githubusercontent.com/89997921/132088560-6069419b-621d-4fda-ba0a-72f01fe75c3d.png)
-*Timing Aware GLS needs back annotation with standard delay formats considered*
+
+**Timing Aware GLS needs back annotation with standard delay formats considered**
 ![image](https://user-images.githubusercontent.com/89997921/132088651-691c20bf-e6ed-4111-b370-a524c87b5cd1.png)
 
+**GLS covered in this course**
+![image](https://user-images.githubusercontent.com/89997921/132088763-a4dbc8a2-bdc3-4c7b-b8c4-69ae3c9cbfb7.png)
+
+**Synthesis Simulation mismatch**
 
 
 #### Day 5
