@@ -438,27 +438,61 @@ Always has * which includes all the changes in the signal used in the block.
 
 
 ```verilog
-module dff_const1(input clk, input reset, input d, output reg q);
-reg q0;
+module code(input clk, input reset, input d, output reg q);
+reg qo;
 always @(posedge clk, posedge reset)
 begin
 	if(reset)
-		q0 = 1'b0;
+		qo = 1'b0;
 		q  = 1'b0;
 	else
 		q  = q0;
-		q0 = d;
+		qo = d;
 
 end
 
 endmodule
 ```
 *Blocking statements execution realizes to different circuit based on the coding*
+
+```verilog
+module code(input clk, input reset, input d, output reg q);
+reg qo;
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		qo = 1'b0;
+		q  = 1'b0;
+	else
+		qo  = d;
+		q   = qo;
+
+end
+
+endmodule
+```
 ![image](https://user-images.githubusercontent.com/89997921/132091912-eff25621-247c-4097-9eae-515a8e749bd9.png)
 
-
-
 **L4 CaveatsWithBlockingStatements**
+
+
+**Moral : Use Non blocking for writing sequential circuilts **
+
+
+*Example : Simulation Synthesis mismatch*
+
+```verilog
+module code(input a,b,c , output reg y);
+reg qo;
+always @(*)
+begin
+   y = qo & c;
+   qo = a | b;
+end
+
+endmodule
+```
+
 
 
 #### Day5
