@@ -163,6 +163,8 @@ Retiming --> usefulness of slack to get the benefit of performance
 Sequential Logic Cloning ( Floor Plan Aware Synthesis ) 
 Having two copies of A to resolve the timing issues 
 
+![image](https://user-images.githubusercontent.com/89997921/132061335-6cf9d906-ae5a-4686-9353-3080cc4780fa.png)
+
 
 
 Combinational Logic Optimization
