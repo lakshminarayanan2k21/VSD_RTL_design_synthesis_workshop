@@ -241,7 +241,12 @@ Question : Whether the flops will be optimized ?
 Answer   : Not it can't be optimized the answer is in the below waveform
 ```
 ![image](https://user-images.githubusercontent.com/89997921/132087038-02c30dba-d3e3-42cf-83b2-5466e2b1e321.png)
-
+**Lab07 Sequential Logic Optimisations part3**
+```
+iverilog dff_const3.v tb_dff_const3.v
+./a.out
+gtkwave tb_dff_const3.vcd
+```
 
 **Synthesis Result dff_const4**
 **Synthesis Result dff_const5**
