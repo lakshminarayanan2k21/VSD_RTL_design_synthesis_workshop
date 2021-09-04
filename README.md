@@ -328,3 +328,26 @@ end
 
 endmodule
 ```
+
+*Synthesis of Case2 Code*
+
+```
+yosys
+yosys>read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys> read_verilog counter_opt2.v
+yosys> synth -top counter_opt2
+yosys>dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+yosys>show
+```
+
+*Statistics of Synthesis results*
+![image](https://user-images.githubusercontent.com/89997921/132087958-220bc508-50c0-4e7a-9da6-0a61605e8fb4.png)
+
+*Netlist result for Counter_opt2*
+![image](https://user-images.githubusercontent.com/89997921/132088019-99f94754-4a17-4ec0-8372-f038b3d2c8ce.png)
+
+```
+The Circuit relaized with more flops and has input D Flip flop followed by counters
+```
+
