@@ -269,3 +269,8 @@ Unused Output Optimization
 
 ![image](https://user-images.githubusercontent.com/89997921/132087503-75d79b4f-fe4f-4694-a822-803ae729576f.png)
 
+```
+We have unused ports in the output port 
+```
+
+![image](https://user-images.githubusercontent.com/89997921/132087575-80732a08-a381-4901-ab71-6fd23e288279.png)
