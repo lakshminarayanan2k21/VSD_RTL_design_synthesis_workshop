@@ -280,8 +280,11 @@ yosys
 yosys>read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 yosys> read_verilog counter_opt.v
 yosys> synth -top counter_opt
-![image](https://user-images.githubusercontent.com/89997921/132087665-1de3801a-297d-4a0e-8cc7-044656fb845e.png)
 yosys>dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 yosys>abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 yosys>show
 ```
+**Only One Flop is realized**
+![image](https://user-images.githubusercontent.com/89997921/132087665-1de3801a-297d-4a0e-8cc7-044656fb845e.png)
+![image](https://user-images.githubusercontent.com/89997921/132087701-f3e87ba6-cb58-461a-aaed-d3e0794df0cc.png)
+
