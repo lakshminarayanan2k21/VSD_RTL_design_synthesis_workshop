@@ -908,9 +908,6 @@ endmodule
 
 **X output has inferred latch in the synthesis result**
 
-![image](https://user-images.githubusercontent.com/89997921/132125361-458b60ff-69a4-4b64-828b-a112f1139178.png)
-
-
 ![image](https://user-images.githubusercontent.com/89997921/132125462-8e615b10-7dc3-4086-b70a-0f220d2e90f9.png)
 
 
