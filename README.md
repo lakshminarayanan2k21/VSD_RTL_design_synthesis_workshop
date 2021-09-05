@@ -817,6 +817,49 @@ endmodule
 ![image](https://user-images.githubusercontent.com/89997921/132124007-38662e9d-0ed1-4c8d-a70a-0d1abe531875.png)
 
 **incomplete overlapping Case part2**
+
+```
+We have added default to the earlier code of incomp_case
+```
+
+```verilog
+module comp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+		default : y = i2;
+	endcase
+end
+endmodule
+```
+
+
+```
+23.23. Printing statistics.
+
+=== comp_case ===
+
+   Number of wires:                 12
+   Number of wire bits:             13
+   Number of public wires:           5
+   Number of public wire bits:       6
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  8
+     $_AND_                          1
+     $_MUX_                          1
+     $_NOT_                          3
+     $_OAI4_                         1
+     $_OR_                           2
+
+```
+***There is no Latch inferred in the synthesis result***
+
+![image](https://user-images.githubusercontent.com/89997921/132124159-562714a2-5a01-4fef-b325-6d9872dbd528.png)
+
 **incomplete overlapping Case part3**
 **incomplete overlapping Case part4**
 **For Loop and For Generate part1**
