@@ -861,6 +861,60 @@ endmodule
 ![image](https://user-images.githubusercontent.com/89997921/132124159-562714a2-5a01-4fef-b325-6d9872dbd528.png)
 
 **incomplete overlapping Case part3**
+
+```verilog
+module partial_case_assign (input i0 , input i1 , input i2 , input [1:0] sel, output reg y , output reg x);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : begin
+			y = i0;
+			x = i2;
+			end
+		2'b01 : y = i1;
+		default : begin
+		           x = i1;
+			   y = i2;
+			  end
+	endcase
+end
+endmodule
+```
+
+![image](https://user-images.githubusercontent.com/89997921/132125271-c8b69a47-d49c-4dcb-ab4f-5d65b5b1970d.png)
+
+**Synthesis Result**
+
+```
+27.23. Printing statistics.
+
+=== partial_case_assign ===
+
+   Number of wires:                 14
+   Number of wire bits:             15
+   Number of public wires:           6
+   Number of public wire bits:       7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 10
+     $_AND_                          1
+     $_DLATCH_P_                     1
+     $_MUX_                          2
+     $_NOT_                          3
+     $_OAI4_                         1
+     $_OR_                           2
+```
+
+**X output has inferred latch in the synthesis result**
+
+![image](https://user-images.githubusercontent.com/89997921/132125361-458b60ff-69a4-4b64-828b-a112f1139178.png)
+
+
+![image](https://user-images.githubusercontent.com/89997921/132125462-8e615b10-7dc3-4086-b70a-0f220d2e90f9.png)
+
+
+
 **incomplete overlapping Case part4**
 **For Loop and For Generate part1**
 **For Loop and For Generate part2**
