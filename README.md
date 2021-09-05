@@ -726,7 +726,47 @@ gvim *incomp* -o
 
 **Incomplete IF part2**
 
+Code for incomp_if2
 
+```verilog
+module incomp_if2 (input i0 , input i1 , input i2 , input i3, output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+	else if (i2)
+		y <= i3;
+
+end
+endmodule
+```
+
+*Circuit Expected for the above code*
+
+![image](https://user-images.githubusercontent.com/89997921/132123215-04514a8b-8942-4ecf-b05f-7bb9e14b8447.png)
+
+
+```
+=== incomp_if2 ===
+
+   Number of wires:                  7
+   Number of wire bits:              7
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     $_DLATCH_P_                     1
+     $_MUX_                          1
+     $_OR_                           1
+```
+
+*Circuit Expected for the above code*
+![image](https://user-images.githubusercontent.com/89997921/132123292-3019b90f-ad1b-4019-ab79-16cf563d2944.png)
+
+
+***Observation from Simulation and synthesis  ***
 
 **incomplete overlapping Case part1**
 **incomplete overlapping Case part2**
