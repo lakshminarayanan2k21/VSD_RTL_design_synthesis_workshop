@@ -128,13 +128,13 @@ The Output of the flop will change only when the clock changes.
 ## Why Flops and Flop coding styles part2
   Sync reset , sync set and Async reset along with sync reset and async reset signals in same circuit.
 
-Lab Flop synthesis simulations part1
+## Flop synthesis simulations part1
  Simulation of all types of dflipflops asynchronus , synchronous resets 
   dff_asyncres.v
   dff_async_set.v
   dff_syncres.v
 
-##Lab Flop synthesis simulations part2
+## Flop synthesis simulations part2
 synthesis of all the above files 
 
 read_verilog dff_asyncres.v
@@ -207,7 +207,8 @@ Sequential Logic Cloning ( Floor Plan Aware Synthesis )
 
 ##Combinational Logic Optimization
 
-**Lab06 Combinational Logic Optimisations part1**
+**Combinational Logic Optimisations part1**
+```
 verilog_files> ls *opt*
 opt_check2.v opt_check3.v opt_check.v  lab ( opt_check4.v multiple_module_opt.v multiple_module_opt.v )
 opt_check.v Mux optimized to AND gate
@@ -216,8 +217,10 @@ after synth -top opt_check
 opt_clean -purge --> command to do optimization
 opt_check2 Inverted NAND gate
 opt_check3 y = a?(c?b:0):0) --> y= abc
+```
+
 ## Sequential Logic Optimization
-**Lab07 Sequential Logic Optimisations part1**
+**Sequential Logic Optimisations part1**
 
 ```
 ls *df*const*
@@ -289,7 +292,7 @@ yosys>show
 **Synthesis Result dff_const4**
 **Synthesis Result dff_const5**
 # Sequential Logic Optimization for Unused Outputs
-**L1 Seq optimisation unused outputs part1**
+**Seq optimisation unused outputs part1**
 
 Unused Output Optimization
 
@@ -335,7 +338,7 @@ yosys>show
 
 ![image](https://user-images.githubusercontent.com/89997921/132087701-f3e87ba6-cb58-461a-aaed-d3e0794df0cc.png)
 
-**L1 Seq optimisation unused outputs part2**
+**Seq optimisation unused outputs part2**
 
 *Case 2 with using all the output logic*
 
@@ -391,7 +394,7 @@ The Circuit relaized with more flops and has input D Flip flop followed by count
 ![image](https://user-images.githubusercontent.com/89997921/132088763-a4dbc8a2-bdc3-4c7b-b8c4-69ae3c9cbfb7.png)
 
 **Synthesis Simulation mismatch**
-*L2 SynthesisSimulationMismatch*
+*SynthesisSimulationMismatch*
 -- Missing Sesitivity List 
 -- Blocking Vs Non-Blocking Assignments
 -- Non Standard Verilog Coding
@@ -517,7 +520,7 @@ endmodule
 
 This makes necesaary to run GLS and check the behaviour of the circuit obtained and conclude that there is no Simulation and synthesis mismatch.
 
-***L1 Lab GLS Synth Sim Mismatch part1***
+***Lab GLS Synth Sim Mismatch part1***
  
   Needed inputs
    - Netlist
@@ -562,7 +565,7 @@ yosys>show
  ./a.out  --> VCD file generation
  gtkwave ternary_perator_mux.vcd
 ```
-***L2 Lab GLS Synth Sim Mismatch part2***
+***Lab GLS Synth Sim Mismatch part2***
 
 ```
  iverilog bad_mux.v tb_bad_mux.v
@@ -589,7 +592,7 @@ yosys>write_verilog -noattr bad_mux_net.v
 **simulation result**
 ![image](https://user-images.githubusercontent.com/89997921/132093529-2d2ba047-956d-4fbc-8072-6bf8d53ef7e5.png)
 
-***L1 Lab Synth sim mismatch blocking statement part1***
+***Lab Synth sim mismatch blocking statement part1***
 
 *Aim  :y= ( (A+B)*C) * 
 
@@ -642,7 +645,7 @@ iverilog ../mylib/verilog_model/primitives.v ../my_lib/verilog_model/sky13_fd_sc
 #### Day5
 ***Optimization in synthesis***
 
-**L1 IF CASE Constructs part1**
+**IF CASE Constructs part1**
  
  If .. else statement
    - Priority logic
@@ -666,7 +669,7 @@ Inference of Latch unintentionally
 
 ![image](https://user-images.githubusercontent.com/89997921/132094948-3a9f151c-1b8d-4679-b78d-028098c04eec.png)
 
-**L2 IF CASE Constructs part2**
+**IF CASE Constructs part2**
 
 *Counter using intentionally a latch to hold the earlier value*
 
@@ -680,7 +683,7 @@ Inference of Latch unintentionally
 
 ![image](https://user-images.githubusercontent.com/89997921/132095399-56478907-981e-43d7-8473-049c467d1ddb.png)
 
-**L3 IF CASE Constructs part3**
+**IF CASE Constructs part3**
 
 *Cavets with case -2 *
 
@@ -690,8 +693,24 @@ Inference of Latch unintentionally
 ![image](https://user-images.githubusercontent.com/89997921/132095703-93cf3cb5-04a6-45dd-8e4b-44e123338f5b.png)
 
 
-**L1 Lab Incomplete IF part1**
-**L2 Lab Incomplete IF part2**
+**Incomplete IF part1**
+
+```
+verilog_files> ls -incomp
+incomp_case.v incomp_if.v incomp_if2.v tb_incomp_case.v tb_incomp_if.v tb_incomp_if2.v
+gvim *incomp* -o
+```
+
+**Circuit Diagram expected for Incomp_if.v**
+![image](https://user-images.githubusercontent.com/89997921/132121260-2ad8f546-37ab-48e2-9e5d-bd7f11cf4010.png)
+
+
+
+
+**Incomplete IF part2**
+
+
+
 **L1 Lab incomplete overlapping Case part1**
 **L2 Lab incomplete overlapping Case part2**
 **L3 Lab incomplete overlapping Case part3**
