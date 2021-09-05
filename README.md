@@ -914,7 +914,9 @@ endmodule
 
   Looping Constructs
    - for loop
-   	- Verilog Models
+   - Evaluating expressions
+   - Not for generating/instantiating HW
    - generate For Loop
-   	- Testbench
+   - ouside always
+   - shouldnot/couldnt be used inside always
 
