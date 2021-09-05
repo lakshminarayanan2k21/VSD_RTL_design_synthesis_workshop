@@ -763,7 +763,7 @@ endmodule
 ```
 
 *Circuit Expected for the above code*
-![image](https://user-images.githubusercontent.com/89997921/132123292-3019b90f-ad1b-4019-ab79-16cf563d2944.png)
+![image](https://user-images.githubusercontent.com/89997921/132123372-93dd5233-4801-4a04-ae1c-ba2f293cb578.png)
 
 
 ***Observation from Simulation and synthesis  ***
