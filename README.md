@@ -696,7 +696,7 @@ Inference of Latch unintentionally
 **Incomplete IF part1**
 
 ```
-verilog_files> ls -incomp
+verilog_files> ls -incomp*
 incomp_case.v incomp_if.v incomp_if2.v tb_incomp_case.v tb_incomp_if.v tb_incomp_if2.v
 gvim *incomp* -o
 ```
@@ -769,6 +769,53 @@ endmodule
 ***Observation from Simulation and synthesis  ***
 
 **incomplete overlapping Case part1**
+
+
+
+```
+lakshminarayanan@rtlworkshop:~/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files$ ls *case*
+bad_case.v  bad_case_net.v  comp_case.v  demux_case.v  incomp_case.v  partial_case_assign.v  tb_bad_case.v  tb_comp_case.v  tb_demux_case.v  tb_incomp_case.v  tb_partial_case_assign.v
+gvim comp_case.v -o incomp_case.v -o partial_case_assign.v -o bad_case.v -o 
+```
+
+```verilog
+module incomp_case (input i0 , input i1 , input i2 , input [1:0] sel, output reg y);
+always @ (*)
+begin
+	case(sel)
+		2'b00 : y = i0;
+		2'b01 : y = i1;
+	endcase
+end
+endmodule
+```
+
+*Circuit Expected for the above code*
+![image](https://user-images.githubusercontent.com/89997921/132123908-6af73e26-71da-4b72-aba8-51a3ba31dbff.png)
+
+```
+19.23. Printing statistics.
+
+=== incomp_case ===
+
+   Number of wires:                 10
+   Number of wire bits:             11
+   Number of public wires:           5
+   Number of public wire bits:       6
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     $_AND_                          1
+     $_DLATCH_P_                     1
+     $_MUX_                          1
+     $_NOR_                          1
+     $_NOT_                          1
+     $_OR_                           1
+```
+
+![image](https://user-images.githubusercontent.com/89997921/132124007-38662e9d-0ed1-4c8d-a70a-0d1abe531875.png)
+
 **incomplete overlapping Case part2**
 **incomplete overlapping Case part3**
 **incomplete overlapping Case part4**
