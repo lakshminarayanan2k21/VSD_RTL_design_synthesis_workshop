@@ -705,6 +705,8 @@ gvim *incomp* -o
 ![image](https://user-images.githubusercontent.com/89997921/132121260-2ad8f546-37ab-48e2-9e5d-bd7f11cf4010.png)
 
 
+![image](https://user-images.githubusercontent.com/89997921/132121456-7709db1a-a0af-49e8-bb75-5f23da152052.png)
+
 
 
 **Incomplete IF part2**
