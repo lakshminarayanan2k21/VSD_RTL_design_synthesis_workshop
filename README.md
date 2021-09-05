@@ -704,8 +704,21 @@ gvim *incomp* -o
 **Circuit Diagram expected for Incomp_if.v**
 ![image](https://user-images.githubusercontent.com/89997921/132121260-2ad8f546-37ab-48e2-9e5d-bd7f11cf4010.png)
 
+```
+11.23. Printing statistics.
 
-![image](https://user-images.githubusercontent.com/89997921/132121456-7709db1a-a0af-49e8-bb75-5f23da152052.png)
+=== incomp_if ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+    ** $_DLATCH_P_                     1**
+```
 
 
 
