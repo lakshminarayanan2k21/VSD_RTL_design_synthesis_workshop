@@ -270,7 +270,7 @@ Question : Whether the flops will be optimized ?
 Answer   : Not it can't be optimized the answer is in the below waveform
 ```
 ![image](https://user-images.githubusercontent.com/89997921/132087038-02c30dba-d3e3-42cf-83b2-5466e2b1e321.png)
-**Lab07 Sequential Logic Optimisations part3**
+**Sequential Logic Optimisations part3**
 ```
 iverilog dff_const3.v tb_dff_const3.v
 ./a.out
@@ -482,7 +482,7 @@ endmodule
 ```
 ![image](https://user-images.githubusercontent.com/89997921/132091912-eff25621-247c-4097-9eae-515a8e749bd9.png)
 
-**L4 CaveatsWithBlockingStatements**
+**CaveatsWithBlockingStatements**
 
 
 **Moral : Use Non blocking for writing sequential circuilts **
@@ -502,8 +502,6 @@ end
 endmodule
 ```
 
-![image](https://user-images.githubusercontent.com/89997921/132092144-79498036-8755-49b5-87aa-39497b9bc0e2.png)
-
 *Might mimic a flop based behaviour but when synthesized will not have a flop*
 
 ```verilog
@@ -520,7 +518,7 @@ endmodule
 
 This makes necesaary to run GLS and check the behaviour of the circuit obtained and conclude that there is no Simulation and synthesis mismatch.
 
-***Lab GLS Synth Sim Mismatch part1***
+***GLS Synth Sim Mismatch part1***
  
   Needed inputs
    - Netlist
@@ -565,7 +563,7 @@ yosys>show
  ./a.out  --> VCD file generation
  gtkwave ternary_perator_mux.vcd
 ```
-***Lab GLS Synth Sim Mismatch part2***
+***GLS Synth Sim Mismatch part2***
 
 ```
  iverilog bad_mux.v tb_bad_mux.v
@@ -592,7 +590,7 @@ yosys>write_verilog -noattr bad_mux_net.v
 **simulation result**
 ![image](https://user-images.githubusercontent.com/89997921/132093529-2d2ba047-956d-4fbc-8072-6bf8d53ef7e5.png)
 
-***Lab Synth sim mismatch blocking statement part1***
+***Synth sim mismatch blocking statement part1***
 
 *Aim  :y= ( (A+B)*C) * 
 
@@ -617,7 +615,7 @@ Problem is code is implemented as blocking statement
 *RTL Simulation*
 ![image](https://user-images.githubusercontent.com/89997921/132093774-b5eaa25c-0476-4a05-916a-67eb66095f00.png)
 
-***L2 Lab Synth sim mismatch blocking statement part2***
+***Synth sim mismatch blocking statement part2***
 
 *Netlist Simulation*
 
